@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered soil analysis and crop recommendation system - Anime Theme">
+    <title>CropWise | Issac Moses Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts imported in CSS -->
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div id="sakura-container"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="brand-showcase">
+                <img src="logo.png" alt="Logo" class="brand-logo">
+                <h1 class="hero-title">CropWise</h1>
+                <div class="creator-name">ℐ𝒮𝒮𝒜𝒞 ℳ𝒪𝒮ℰ𝒮</div>
+            </div>
+
+            <p class="hero-subtitle">Soil Analysis Protocol </p>
+            <div class="hero-description">
+                𝚄𝚜𝚒𝚗𝚐 𝚊𝚍𝚟𝚊𝚗𝚌𝚎𝚍 𝙲𝚘𝚗𝚟𝚘𝚕𝚞𝚝𝚒𝚘𝚗𝚊𝚕 𝙽𝚎𝚞𝚛𝚊𝚕 𝙽𝚎𝚝𝚠𝚘𝚛𝚔𝚜 𝚊𝚗𝚍 𝙻𝚂𝚃𝙼 𝚊𝚕𝚐𝚘𝚛𝚒𝚝𝚑𝚖𝚜 𝚝𝚘 𝚊𝚗𝚊𝚕𝚢𝚣𝚎 𝚜𝚘𝚒𝚕 𝚙𝚊𝚛𝚊𝚖𝚎𝚝𝚎𝚛𝚜. 𝙾𝚙𝚝𝚒𝚖𝚒𝚣𝚎𝚍
+                𝚏𝚘𝚛 𝚖𝚊𝚡𝚒𝚖𝚞𝚖 𝚢𝚒𝚎𝚕𝚍 𝚘𝚙𝚎𝚛𝚊𝚝𝚒𝚘𝚗𝚜.
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Input Form Section -->
+        <section class="input-section">
+            <div class="section-header">
+                <h2 class="section-title">PARAMETER INPUT</h2>
+                <p class="section-description">Enter soil data for analysis</p>
+            </div>
+
+            <form id="soilForm" class="soil-form">
+                <!-- NPK Values Group -->
+                <div class="form-group-header">
+                    <h3>NUTRIENTS</h3>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="nitrogen">Nitrogen (N)</label>
+                        <input type="number" id="nitrogen" name="nitrogen" min="0" max="140" step="0.1" required
+                            placeholder="0 - 140">
+                        <span class="input-hint">kg/ha</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phosphorus">Phosphorus (P)</label>
+                        <input type="number" id="phosphorus" name="phosphorus" min="5" max="145" step="0.1" required
+                            placeholder="5 - 145">
+                        <span class="input-hint">kg/ha</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="potassium">Potassium (K)</label>
+                        <input type="number" id="potassium" name="potassium" min="5" max="205" step="0.1" required
+                            placeholder="5 - 205">
+                        <span class="input-hint">kg/ha</span>
+                    </div>
+                </div>
+
+                <!-- Soil Properties Group -->
+                <div class="form-group-header">
+                    <h3>PROPERTIES</h3>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="ph">pH Level</label>
+                        <input type="number" id="ph" name="ph" min="3.5" max="9.5" step="0.1" required
+                            placeholder="3.5 - 9.5">
+                        <span class="input-hint">pH</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="moisture">Moisture</label>
+                        <input type="number" id="moisture" name="moisture" min="0" max="100" step="0.1" required
+                            placeholder="0 - 100">
+                        <span class="input-hint">%</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="soilType">Soil Type</label>
+                        <select id="soilType" name="soilType" required>
+                            <option value="">Select Type</option>
+                            <option value="Sandy">Sandy</option>
+                            <option value="Loamy">Loamy</option>
+                            <option value="Clay">Clay</option>
+                            <option value="Silt">Silt</option>
+                            <option value="Peaty">Peaty</option>
+                            <option value="Chalky">Chalky</option>
+                            <option value="Saline">Saline</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Environmental Conditions Group -->
+                <div class="form-group-header">
+                    <h3>ENVIRONMENT</h3>
+                </div>
+
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="temperature">Temperature</label>
+                        <input type="number" id="temperature" name="temperature" min="8" max="45" step="0.1" required
+                            placeholder="8 - 45">
+                        <span class="input-hint">°C</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="rainfall">Rainfall</label>
+                        <input type="number" id="rainfall" name="rainfall" min="20" max="300" step="0.1" required
+                            placeholder="20 - 300">
+                        <span class="input-hint">mm</span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary" id="analyzeBtn">
+                        INITIATE ANALYSIS
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="section-header">
+                <h2 class="section-title">ANALYSIS RESULTS</h2>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">PROCESSING DATA...</p>
+            </div>
+
+            <!-- Results Container -->
+            <div class="results-container" id="resultsContainer">
+                <!-- Dynamic crop cards will be inserted here -->
+            </div>
+
+            <!-- Error State -->
+            <div class="error-state" id="errorState" style="display: none;">
+                <h3 class="error-title">SYSTEM FAILURE</h3>
+                <p class="error-message" id="errorMessage"></p>
+                <button class="btn-secondary" onclick="location.reload()">RETRY</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>SYSTEM DESIGN BY <strong>ℐ𝒮𝒮𝒜𝒞 ℳ𝒪𝒮ℰ𝒮</strong> | CROPWISE PROTOCOL v2.0</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Sakura Rain Script
+        function createPetal() {
+            const container = document.getElementById('sakura-container');
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+
+            // Randomize size, position and speed
+            const size = Math.random() * 10 + 5;
+            const left = Math.random() * 100;
+            const duration = Math.random() * 5 + 5;
+            const delay = Math.random() * 5;
+
+            petal.style.width = `${size}px`;
+            petal.style.height = `${size}px`;
+            petal.style.left = `${left}%`;
+            petal.style.animationDuration = `${duration}s`;
+            petal.style.animationDelay = `${delay}s`;
+
+            container.appendChild(petal);
+
+            // Remove petal after animation to prevent memory leak
+            setTimeout(() => {
+                petal.remove();
+            }, (duration + delay) * 1000);
+        }
+
+        // Create petals periodically
+        setInterval(createPetal, 300);
+
+        // Initial batch
+        for (let i = 0; i < 20; i++) {
+            createPetal();
+        }
+    </script>
+</body>
+
+</html>
